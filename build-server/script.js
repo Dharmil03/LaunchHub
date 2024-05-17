@@ -3,7 +3,6 @@ const path = require('path')
 const fs = require('fs')
 const { S3Client, PutObjectCommand } = require('@aws-sdk/client-s3')
 const mime = require('mime-types')
-const Redis = require('ioredis')
 
 const s3Client = new S3Client({
     region: '',
@@ -17,7 +16,6 @@ const PROJECT_ID = process.env.PROJECT_ID
 
 async function init() {
     console.log('Executing script.js')
-    publishLog('Build Started...')
     const outDirPath = path.join(__dirname, 'output')
 
     const p = exec(`cd ${outDirPath} && npm install && npm run build`)

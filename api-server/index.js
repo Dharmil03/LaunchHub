@@ -7,10 +7,6 @@ const Redis = require('ioredis')
 const app = express()
 const PORT = 9000
 
-
-const io = new Server({ cors: '*' })
-
-
 const ecsClient = new ECSClient({
     region: '',
     credentials: {

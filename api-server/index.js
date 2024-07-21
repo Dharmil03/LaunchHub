@@ -1,8 +1,6 @@
 const express = require('express')
 const { generateSlug } = require('random-word-slugs')
 const { ECSClient, RunTaskCommand } = require('@aws-sdk/client-ecs')
-const { Server } = require('socket.io')
-const Redis = require('ioredis')
 
 const app = express()
 const PORT = 9000
